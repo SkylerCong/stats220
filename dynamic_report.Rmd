@@ -1,0 +1,67 @@
+---
+title: "Phone usage report"
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+library(tidyverse)
+```
+
+## Daily phone usage patterns  
+
+```{r}
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vR8Y2y-LRMlmleaLxz9OHWzMzTu_2Lv7bv_J9MqsRaTmIMOYU3po8gRomSvXuzSbJtHDBdXinh_sTTV/pub?output=csv")
+
+
+latest_data <- logged_data %>%
+  rename(
+    timestamp = 1,
+    hours_used = 2,
+    main_use = 3,
+    before_sleep = 4
+  )
+
+
+```
+
+```{r}
+latest_data %>%
+  ggplot(aes(x = main_use)) +
+  geom_bar(fill = "#aecdd2") +
+  theme_minimal() +
+  labs(
+    title = "Main phone use",
+    x = "Type of use",
+    y = "Count"
+  )
+
+```
+
+```{r}
+latest_data %>%
+  ggplot(aes(x = before_sleep)) +
+  geom_bar(fill = "#cdb4db") +
+  theme_minimal() +
+  labs(
+    title = "Phone use before sleep",
+    x = "Before sleep",
+    y = "Count"
+  )
+
+```
+
+```{r}
+# summary values
+mean_hours <- mean(latest_data$hours_used, na.rm = TRUE)
+max_hours <- max(latest_data$hours_used, na.rm = TRUE)
+min_hours <- min(latest_data$hours_used, na.rm = TRUE)
+
+```
+
+
+The average daily phone usage is `r round(mean_hours, 1)` hours.
+
+The maximum recorded usage is `r max_hours` hours, while the minimum is `r min_hours` hours.
+
+This suggests there is variation in daily phone usage behaviour.

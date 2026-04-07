@@ -24,4 +24,4 @@ I am learning *data technologies* and programming.
 ## My study mood meme
 
 A meme that captures how I currently feel about my university studies is
-![](https://media.tenor.com/8QK9wR6oGQMAAAAC/coding-computer.gif)
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2dwcXEyZHI4cTV1ZHZ3YzZsNzIxd20zM3E2em43NWNob3Zobnd3ciZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/vrSB6iOxno7db2k5CY/200.webp)

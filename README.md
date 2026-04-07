@@ -4,12 +4,19 @@
 This is my repo for **STATS 220**.
 
 I am learning *data technologies* and programming.
+
 ## A little about me
 
 - I am undertaking a degree in Statistics
 - I am taking STATS 220 because I am interested in data and coding.
 - I am interested in learning about data science and programming.
-- 
+
+## My goals
+
+1. Learn R  
+2. Improve coding skills  
+3. Understand data technologies 
+
 ## Useful link
 [University of Auckland](https://www.auckland.ac.nz)
 
